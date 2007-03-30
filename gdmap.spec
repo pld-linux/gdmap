@@ -7,12 +7,13 @@ License:	GPL
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/gdmap/%{name}-%{version}.tar.gz
 # Source0-md5:	e27f9a4c029449182ce5a4dbec38870e
-URL:		http://gdmap.sourceforge.net
+URL:		http://gdmap.sourceforge.net/
 BuildRequires:	desktop-file-utils
 BuildRequires:	gettext-devel
-BuildRequires:	gtk+2-devel
+BuildRequires:	gtk+2-devel >= 2:2.6.0
 BuildRequires:	intltool
-BuildRequires:	libxml2-devel
+BuildRequires:	libxml2-devel >= 2.0.0
+BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -44,10 +45,9 @@ rm -rf $RPM_BUILD_ROOT
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-
 %files -f GdMap.lang
 %defattr(644,root,root,755)
-%doc COPYING
+%doc ChangeLog
 %attr(755,root,root) %{_bindir}/%{name}
 %{_desktopdir}/*.desktop
 %dir %{_datadir}/%{name}
