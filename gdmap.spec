@@ -9,7 +9,7 @@ Source0:	http://dl.sourceforge.net/gdmap/%{name}-%{version}.tar.gz
 # Source0-md5:	e27f9a4c029449182ce5a4dbec38870e
 URL:		http://gdmap.sourceforge.net/
 BuildRequires:	desktop-file-utils
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	gtk+2-devel >= 2:2.6.0
 BuildRequires:	intltool
 BuildRequires:	libxml2-devel >= 2.0.0
